@@ -1,11 +1,25 @@
 doctype html
-html
+html(lang="es")
   head
-    title HIS - Admisión
-    link(rel='stylesheet', href='/css/style.css')
-  body
-    nav
-      ul
-        li: a(href='/pacientes') Pacientes
-        li: a(href='/admisiones') Admisiones
-    block content
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Sistema HIS - Hospital
+    // Tailwind CDN para estilos
+    script(src="https://cdn.tailwindcss.com")
+
+  body.bg-gray-100.font-sans.min-h-screen.flex.flex-col
+    header.bg-teal-700.text-white.shadow-md
+      nav.container.mx-auto.flex.justify-between.items-center.p-4
+        a(href="/" class="text-xl font-bold hover:underline") Sistema HIS
+        ul.flex.space-x-6
+          li
+            a(href="/pacientes" class="hover:underline") Pacientes
+          li
+            a(href="/admisiones" class="hover:underline") Admisiones
+
+    main.container.mx-auto.flex-grow.px-6.py-8
+      block content
+
+    footer.bg-gray-200.text-center.text-gray-600.text-sm.py-4.mt-auto
+      | © 2025 Sistema HIS - Programación Web II | Desarrollado con ❤️ por Mile
+

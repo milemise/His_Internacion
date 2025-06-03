@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .min-h-screen.bg-gray-100.flex.flex-col.items-center.justify-center.p-6
+    .text-center.mb-10
+      h1.text-4xl.font-bold.text-blue-900 Sistema Hospitalario HIS
+      p.text-lg.text-gray-600.mt-2 Bienvenido/a al sistema de gestión de internaciones
+
+    .grid.grid-cols-1.md:grid-cols-2.lg:grid-cols-3.gap-6.mt-6
+      a(href="/pacientes", class="bg-white rounded-xl shadow-md p-6 hover:bg-blue-50 transition border border-blue-200")
+        h2.text-xl.font-semibold.text-blue-800 Gestionar Pacientes
+        p.text-sm.text-gray-600.mt-2 Alta, edición y listado de pacientes.
+
+      a(href="/admisiones", class="bg-white rounded-xl shadow-md p-6 hover:bg-blue-50 transition border border-blue-200")
+        h2.text-xl.font-semibold.text-blue-800 Admisiones
+        p.text-sm.text-gray-600.mt-2 Registrar nuevas internaciones y asignar habitaciones.
+
+      a(href="/emergencias/nuevo", class="bg-white rounded-xl shadow-md p-6 hover:bg-blue-50 transition border border-blue-200")
+        h2.text-xl.font-semibold.text-blue-800 Emergencias
+        p.text-sm.text-gray-600.mt-2 Ingresar pacientes por urgencias médicas.
+
+      a(href="/pacientes-admisiones", class="bg-white rounded-xl shadow-md p-6 hover:bg-blue-50 transition border border-blue-200")
+        h2.text-xl.font-semibold.text-blue-800 Historial y Derivaciones
+        p.text-sm.text-gray-600.mt-2 Consultar derivaciones, historial y registros.
+
+    footer.mt-12.text-center.text-gray-400.text-sm
+      p Sistema desarrollado para prácticas integradoras | Programación Web II

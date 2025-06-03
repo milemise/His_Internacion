@@ -1,8 +1,24 @@
 extends ../layout
 
 block content
-  h1 Admisiones
-  a(href='/admisiones/nueva') Nueva Admisión
-  ul
-    each adm in admisiones
-      li= adm.fecha_ingreso + ' - ' + adm.Paciente.nombre
+  .max-w-5xl.mx-auto.bg-white.mt-10.p-6.rounded-2xl.shadow-lg
+    h1.text-3xl.font-bold.text-blue-900.mb-6 Admisiones
+
+    .flex.justify-end.mb-4
+      a(href="/admisiones/nueva", class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md") Nueva Admisión
+
+    table.table-auto.w-full.border.border-gray-200.rounded-lg.shadow
+      thead.bg-blue-100
+        tr
+          th.text-left.p-3.text-sm.text-gray-700 Fecha de Ingreso
+          th.text-left.p-3.text-sm.text-gray-700 Paciente
+          th.text-left.p-3.text-sm.text-gray-700 Motivo
+          th.text-left.p-3.text-sm.text-gray-700 Acciones
+      tbody
+                each adm in admisiones
+                  tr(class="border-b border-gray-100 hover:bg-blue-50")
+                    td.p-3= adm.fecha_ingreso
+                    td.p-3= adm.Paciente ? adm.Paciente.nombre + ' ' + adm.Paciente.apellido : ''
+                    td.p-3= adm.motivo
+                    td.p-3
+                      a(href=`/admisiones/${adm.id}`, class="text-blue-600 hover:underline text-sm") Ver Detalle
