@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1 Nueva Admisión
+  form(action='/admisiones/nueva', method='POST')
+    select(name='pacienteId')
+      each p in pacientes
+        option(value=p.id)= p.nombre + ' ' + p.apellido
+    input(type='datetime-local', name='fecha_ingreso')
+    input(type='text', name='motivo', placeholder='Motivo')
+    button(type='submit') Guardar

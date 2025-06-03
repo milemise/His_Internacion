@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h1 Admisiones
+  a(href='/admisiones/nueva') Nueva Admisión
+  ul
+    each adm in admisiones
+      li= adm.fecha_ingreso + ' - ' + adm.Paciente.nombre

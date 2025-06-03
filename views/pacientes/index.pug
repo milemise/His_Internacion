@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h1 Pacientes
+  a(href='/pacientes/nuevo') Nuevo Paciente
+  ul
+    each paciente in pacientes
+      li= paciente.nombre + ' ' + paciente.apellido

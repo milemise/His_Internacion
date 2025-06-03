@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "sequelize-cli": "^6.6.3",
+    "tailwindcss": "^4.1.8"
+  }
+}
